@@ -16,7 +16,7 @@ top-container->z index, top, grid, how to fix at the top and below the tap-bar?
       item
     search -> button, color: gray, imple:later
       x (tnw conference : not)
-  ad-job -> color:default, bg:yellow
+  message -> color:default, bg:yellow
 
 h1 : font-size 56, line-height: 1,  weight: 600
 h2 : 28 / 1 /   weight: 600

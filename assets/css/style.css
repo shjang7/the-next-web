@@ -32,7 +32,7 @@ h4 {
 }
 
 .f-xs {
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.5;
 }
 
@@ -57,10 +57,41 @@ h4 {
 }
 
 header {
-  background: lightblue;
-  height: 300px;
   width: 100%;
-  /**/
+}
+
+header .u-clear {
+  display: grid;
+  grid-template-columns: 80px auto 40px 180px;
+  align-items: center;
+  /* height: 50px; */
+}
+
+.u-clear .logo {
+  border: 1px red solid;
+}
+
+.u-clear .nav-bar {
+  border: 1px red solid;
+}
+
+.u-clear .search {
+  text-align: center;
+  padding: 15px 0;
+  color: lightgray;
+  border-left: 0.2px lightgray solid;
+  border-right: 0.2px lightgray solid;
+}
+
+.u-clear .current-time {
+  text-align: center;
+  color: red;
+}
+
+header .message {
+  background: lightyellow;
+  text-align: center;
+  height: 25px;
 }
 
 main {
@@ -112,7 +143,7 @@ main {
 }
 
 #popular .element:nth-child(2n) {
-  background-color: #afa;/*temp*/
+  background-color: #afa; /*temp*/
 }
 
 footer {
