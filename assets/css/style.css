@@ -1,8 +1,10 @@
-
+/* 
+font-family: 'Righteous', cursive;
+font-family: 'Open Sans', sans-serif;
+*/
 
 body {
-  font : 400 18px/1.5 sans-serif;
-  /*Adding google font*/
+  font: 400 18px/1.5 "Open Sans", sans-serif;
 }
 
 h1,
@@ -55,18 +57,47 @@ h4 {
 }
 
 header {
+  background: lightblue;
+  height: 300px;
+  width: 100%;
   /**/
 }
 
-
 main {
-  /**/
+  background: lightgoldenrodyellow;
+  height: 800px;
+  width: 100%;
+}
+
+#latest {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+#latest .element {
+  background: lightpink;
+  border: 1px blue solid;
+  padding: 20px;
+  width: 100%;
+  height: 100px;
 }
 
 footer {
-  /**/
+  background: lightgray;
+  height: 250px;
+  width: 100%;
 }
 
+/* between 750px ~ 1000px */
 @media only screen and (min-width: 750px) {
+  #latest {
+    grid-template-columns: repeat(3, auto);
+  }
+}
 
+/* 1000px and up */
+@media only screen and (min-width: 1000px) {
+  #latest {
+    grid-template-columns: repeat(4, auto);
+  }
 }
