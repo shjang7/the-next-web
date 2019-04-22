@@ -1,4 +1,4 @@
-/* 
+/*
 font-family: 'Righteous', cursive;
 font-family: 'Open Sans', sans-serif;
 */
@@ -65,11 +65,29 @@ header {
 
 main {
   background: lightgoldenrodyellow;
-  height: 800px;
   width: 100%;
 }
 
-#latest {
+#top-news {
+  display: grid;
+  grid-template: none;
+  height: 100px;
+}
+
+#top-news .first-news {
+  background-color: orange;
+}
+
+#top-news .rest-news {
+  background-color: pink;
+}
+#top-news .rest-news:nth-child(2) {
+  background-color: yellow;
+}
+
+#latest,
+#funding,
+#deal {
   display: grid;
   grid-template-columns: auto;
 }
@@ -82,6 +100,21 @@ main {
   height: 100px;
 }
 
+#popular {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#popular .element {
+  width: 100%;
+  height: 100px;
+  background: #faa;
+}
+
+#popular .element:nth-child(2n) {
+  background-color: #afa;/*temp*/
+}
+
 footer {
   background: lightgray;
   height: 250px;
@@ -90,8 +123,24 @@ footer {
 
 /* between 750px ~ 1000px */
 @media only screen and (min-width: 750px) {
+  #top-news {
+    height: 200px;
+  }
+  #top-news .first-news {
+    grid-row: 1/3;
+    grid-column: 1;
+  }
+
+  #top-news .rest-news {
+    grid-column: 2;
+  }
+
   #latest {
     grid-template-columns: repeat(3, auto);
+  }
+  #popular .element {
+    width: 48%;
+    margin: 0.8%;
   }
 }
 
@@ -99,5 +148,9 @@ footer {
 @media only screen and (min-width: 1000px) {
   #latest {
     grid-template-columns: repeat(4, auto);
+  }
+  #popular .element {
+    width: 31.5%;
+    margin: 0.8%;
   }
 }

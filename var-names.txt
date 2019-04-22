@@ -1,6 +1,6 @@
-max-w : (wrapper-max:1192), col: 4(1000up), 3(750up),1(default) 
-Media : 
-  latest, funding, deal : col: 4(1000up), 3(750up),1(default) 
+max-w : (wrapper-max:1192), col: 4(1000up), 3(750up),1(default)
+Media :
+  latest, funding, deal : col: 4(1000up), 3(750up),1(default)
   populars : 3(1000up), 2(750up), 1(default)
 
 [body]
@@ -11,7 +11,7 @@ top-container->z index, top, grid, how to fix at the top and below the tap-bar?
  x( logo -> resize the screen, text: image)
   taps -> default:gray, focus:white, z-index:less ,relative, bg:black
     menu : news,events -> ul (news:focus)
-  u-clear -> z-index:higher 
+  u-clear -> z-index:higher
     nav-bar-> color:gray/black, bg:white  flex?
       item
     search -> button, color: gray, imple:later
@@ -22,39 +22,40 @@ h1 : font-size 56, line-height: 1,  weight: 600
 h2 : 28 / 1 /   weight: 600
 h3 : 24 / 1 / : 600
 h4 : 18 / 1 / : 600
- 
+
 f-xs : font-size 18 line-height: 1.5
 f-s : 20 / 1.5
 f-m : 22 / 1.5
 f-l : 24 / 1.5
 f-xl : 26 / 1.5
-f-c-lg / 
+f-c-lg /
 
 body : deep gray, some : black,
 [main]
 top-news ->  bg: image, grid
-  sort : Apps, tech -> color: white
-  title : h tag, h1,h2 -> color: white,
-  author-box
-    author : by someone -> color: gray hover : white
-    time, icons
+  first-news, rest-news
+    sort : Apps, tech -> color: white
+    title : h tag, h1,h2 -> color: white,
+    author-box
+      author : by someone -> color: gray hover : white
+      time, icons
 
-Media : 
-  latest, funding, deal : col: 4(1000up), 3(750up),1(default) 
+Media :
+  latest, funding, deal : col: 4(1000up), 3(750up),1(default)
   populars : 3(1000up), 2(750up), 1(default)
 
 <- wrapper section or div   max-w : 1192
 latest :
   title  : h2, a.color: orange/(hover)black
-  element : 8, 
+  element : 8,
     story-image -> (bg)
     text
       title -> h2(28)    a-color : black/a-hover :orange
       author -> a-color :gray  a-hover :black
- 
+
 funding
   top-box : orange /black
-    title : h2, 
+    title : h2,
     more
    element : same with latest
       company-info
@@ -66,13 +67,13 @@ funding
       tech
       funding-company
       comment, span: f-c-lg
-populars: (section or div) ->includes apps, gear, tech
-  apps div
+popular: (section or div) ->includes apps, gear, tech
+  element div
     title ->(Apps), h2,orange,(hover)black
     on-head div
       sort : (most popular)
       title : color:white, hover:white
-      author : (a)gray/(hover)white  =>apps, gear,…: same
+      author : (a)gray/(hover)white  =>apps, gear,ï¿½: same
     latest-news : color: orange
       sort : (latest)
       title : h4
@@ -85,7 +86,7 @@ deal : same with deal
     img tag
     text
       title -> h4, black/orange
-      price 
+      price
 
 [footer]
   link div
@@ -93,4 +94,4 @@ deal : same with deal
     text ul, :gray/white
       li
   copyright
-     © 
+     ï¿½
