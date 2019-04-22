@@ -8,7 +8,7 @@ Media :
    color: deep gray
 [header]
 top-container->z index, top, grid, how to fix at the top and below the tap-bar?
- x( logo -> resize the screen, text: image)
+ logo -> small screen, big:hide, text: image
   taps -> default:gray, focus:white, z-index:less ,relative, bg:black
     menu : news,events -> ul (news:focus)
   u-clear -> z-index:higher
