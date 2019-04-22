@@ -1,0 +1,72 @@
+
+
+body {
+  font : 400 18px/1.5 sans-serif;
+  /*Adding google font*/
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 56;
+}
+
+h2 {
+  font-size: 28;
+}
+
+h3 {
+  font-size: 24;
+}
+
+h4 {
+  font-size: 18;
+}
+
+.f-xs {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.f-s {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.f-m {
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.f-l {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.f-xl {
+  font-size: 26px;
+  line-height: 1.5;
+}
+
+header {
+  /**/
+}
+
+
+main {
+  /**/
+}
+
+footer {
+  /**/
+}
+
+@media only screen and (min-width: 750px) {
+
+}
