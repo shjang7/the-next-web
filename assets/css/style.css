@@ -17,15 +17,15 @@ h4 {
 }
 
 h1 {
-  font-size: 56;
+  font-size: 56px;
 }
 
 h2 {
-  font-size: 28;
+  font-size: 28px;
 }
 
 h3 {
-  font-size: 24;
+  font-size: 24px;
 }
 
 h4 {
@@ -38,17 +38,17 @@ h4 {
 }
 
 .f-s {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.5;
 }
 
 .f-m {
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.5;
 }
 
 .f-l {
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1.5;
 }
 
@@ -168,8 +168,17 @@ main {
 
 #popular .element {
   width: 100%;
-  height: 100px;
+  /*height: 100px;*/
   background: #faa;
+}
+
+#popular .on-head {
+  width: 100%;
+  height: 200px;
+  background: yellow;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
 }
 
 #popular .sort,
@@ -181,6 +190,22 @@ main {
   color: white;
   text-decoration: none;
 }
+
+#popular .latest-news,
+#popular .latest-news a,
+#popular ul {
+  color: orange;
+  text-decoration: none;
+}
+
+#popular ul a:link {
+  color: gray;
+}
+
+#popular ul a:hover {
+  color: black;
+}
+
 
 #popular .element:nth-child(2n) {
   background-color: #afa; /*temp*/
