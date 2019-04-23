@@ -7,6 +7,9 @@ Media :
   font-style : default values
    color: deep gray
 [header]
+1st : 3 col,
+2nd : 4 col+1/3merge
+
 top-container->z index, top, grid, how to fix at the top and below the tap-bar?
  taps -> default:gray, focus:white, z-index:less ,relative, bg:black
     menu : news,events -> ul (news:focus)
@@ -81,7 +84,7 @@ popular: (section or div) ->includes apps, gear, tech
     li,,
 
 deal : same with deal
-  title :  h2, orange/balck
+  title :  h2, orange/black
   element : float
     img tag
     text

@@ -136,6 +136,7 @@ main {
 }
 
 #latest > .title,
+#popular .element > .title,
 #funding > .title,
 #deal > .title {
   width: 100%;
@@ -155,18 +156,26 @@ main {
   box-sizing: border-box;
 }
 
-#latest > .element:nth-child(4n-1) {
+#deal .element:nth-child(4n-1),
+#funding .element:nth-child(4n-1),
+#latest .element:nth-child(4n-1) {
   background-color: yellow;
 }
 
+#deal .element:nth-child(4n-2),
+#funding .element:nth-child(4n-2),
 #latest > .element:nth-child(4n-2) {
   background-color: pink;
 }
 
+#deal .element:nth-child(4n-3),
+#funding .element:nth-child(4n-3),
 #latest > .element:nth-child(4n-3) {
   background-color: green;
 }
 
+#deal .element:nth-child(4n),
+#funding .element:nth-child(4n),
 #latest > .element:nth-child(4n) {
   background-color: lightgray;
 }
@@ -178,8 +187,6 @@ main {
 
 #popular .element {
   width: 100%;
-  /*height: 100px;*/
-  background: #faa;
 }
 
 #popular .on-head {
@@ -190,30 +197,9 @@ main {
   flex-flow: column nowrap;
   justify-content: flex-end;
 }
-
-#popular .sort,
-#popular .on-head > .title {
-  color: white;
-}
-
-#popular .on-head > .title a {
-  color: white;
-  text-decoration: none;
-}
-
-#popular .latest-news,
-#popular .latest-news a,
-#popular ul {
-  color: orange;
-  text-decoration: none;
-}
-
-#popular ul a:link {
-  color: gray;
-}
-
-#popular ul a:hover {
-  color: black;
+#popular .latest-news {
+  height: 100px;
+  background-color: #ffccdd;
 }
 
 #popular .element:nth-child(2n) {
@@ -224,6 +210,47 @@ footer {
   background: lightgray;
   height: 250px;
   width: 100%;
+}
+
+#popular .on-head .sort,
+#popular .on-head > .title,
+#popular .on-head > .title a {
+  color: white;
+  text-decoration: none;
+}
+
+#popular ul a:link {
+  color: gray;
+}
+
+#latest > .title a:link,
+#latest .element .title a:hover,
+#funding > .title a:link,
+#funding .top-box a:link,
+#popular .element > .title a:link,
+#popular .latest-news,
+#popular .latest-news a:link,
+#popular ul a:link,
+#deal > .title a:link,
+#deal .element .title a:hover {
+  color : #FF4500;  /*orange */
+  text-decoration: none;
+}
+
+.nav-bar a:hover,
+#latest > .title a:hover,
+#latest .element .author a:hover,
+#funding > .title a:hover, 
+#funding .top-box a:hover,
+#funding .element a:hover,
+#funding .amount,
+#funding .tech a:hover,
+#funding .funding-company a:hover,
+#popular .element .title a:hover,
+#popular li a:hover,
+#deal > .title a:hover,
+#deal .element  .title a:link {
+  color : #000;
 }
 
 /* between 750px ~ 1000px */
