@@ -158,10 +158,20 @@ main {
 }
 
 #top-news .first-news {
-  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,.3) 100%),url(./../images/newe-796x531.png) 100% 50%/cover no-repeat;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    ),
+    url(./../images/newe-796x531.png) 100% 50% / cover no-repeat;
 }
 #top-news .first-news:hover {
-  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.1) 100%),url(./../images/newe-796x531.png) 100% 50%/cover no-repeat;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.1) 100%
+    ),
+    url(./../images/newe-796x531.png) 100% 50% / cover no-repeat;
 }
 
 #top-news .rest-news {
@@ -255,7 +265,7 @@ main {
 footer {
   box-sizing: border-box;
   background: #000;
-  height: 500px;
+  height: 300px;
   width: 100%;
   text-align: center;
   padding: 50px;
@@ -268,8 +278,27 @@ footer .text {
 footer .text li {
   display: inline;
   text-align: center;
+  font-weight: 700;
   padding: 0 10px;
   text-transform: uppercase;
+}
+
+footer .copyright {
+  margin-top: 100px;
+  font-weight: 400;
+}
+
+footer .copyright span {
+  display: block;
+}
+
+footer .copyright span strong {
+  color: red;
+}
+
+footer .copyright b {
+  color: lightgrey;
+  font-weight: 700;
 }
 
 a:link {
@@ -284,9 +313,10 @@ a:link {
 #funding .element .title a:link,
 #popular .on-head .sort,
 #popular .on-head > .title,
-#popular .on-head > .title a #popular .author a:hover,
+#popular .on-head > .title a,
+#popular .author a:hover,
 .icons i,
-footer .link a:hover {
+footer .link .text a:hover {
   color: white;
 }
 
@@ -374,6 +404,10 @@ footer .text li a:link {
   #popular .element {
     width: 48%;
     margin: 0.8%;
+  }
+
+  footer .copyright span {
+    display: inline-block;
   }
 }
 
