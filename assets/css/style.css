@@ -17,7 +17,7 @@ h4 {
 }
 
 h1 {
-  font-size: 56px;
+  font-size: 42px;
 }
 
 h2 {
@@ -138,15 +138,34 @@ main {
 #top-news {
   display: grid;
   grid-template: none;
-  height: 300px;
+  height: 600px;
   margin-top: 94px;
 }
 
+#top-news .element {
+  margin: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#top-news .sort {
+  margin-top: 110px;
+}
+
+#top-news .title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
 #top-news .first-news {
-  background: url(./../images/newe-796x531.png) 100% 50% no-repeat;
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,.3) 100%),url(./../images/newe-796x531.png) 100% 50%/cover no-repeat;
+}
+#top-news .first-news:hover {
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.1) 100%),url(./../images/newe-796x531.png) 100% 50%/cover no-repeat;
 }
 
 #top-news .rest-news {
+  background: #000 url(./../images/newe-796x531.png) 100% 50% no-repeat;
   background-color: pink;
 }
 
@@ -326,7 +345,7 @@ footer .text li a:link {
   }
 
   #top-news {
-    height: 531px;
+    height: 400px;
   }
 
   #top-news .first-news {
@@ -360,6 +379,10 @@ footer .text li a:link {
 
 /* 1000px and up */
 @media only screen and (min-width: 1000px) {
+  #top-news {
+    height: 500px;
+  }
+
   #latest .element,
   #funding .element,
   #deal .element {
