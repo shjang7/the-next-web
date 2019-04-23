@@ -59,13 +59,30 @@ h4 {
 
 header {
   width: 100%;
+  position: fixed;
+  top: 0px;
+}
+
+header .taps {
+  display: none;
+  background: #333;
+  padding-left: 20px;
+  height: 25px;
+}
+
+header .taps li {
+  list-style: none;
+  display: inline;
+  color: lightgray;
+  margin: 0 10px;
 }
 
 header .u-clear {
   display: grid;
   grid-template-columns: 102px auto 40px 180px;
   align-items: center;
-  /* height: 50px; */
+  background: white;
+  height: 44px;
 }
 
 .u-clear .logo {
@@ -74,9 +91,10 @@ header .u-clear {
 
 .u-clear .nav-bar {
   margin-left: 20px;
-  display: none;
+}
 
-  /* text-align: center; */
+.u-clear .nav-bar ul {
+  display: none;
 }
 
 .u-clear .nav-bar li {
@@ -88,7 +106,7 @@ header .u-clear {
 
 .u-clear .search {
   text-align: center;
-  padding: 15px 0;
+  /* padding: 0 0; */
   color: lightgray;
   border-left: 0.2px lightgray solid;
   border-right: 0.2px lightgray solid;
@@ -100,8 +118,10 @@ header .u-clear {
 }
 
 header .message {
-  background: lightyellow;
+  background: rgb(255, 208, 0);
   text-align: center;
+  color: black;
+  font-weight: 200;
   height: 25px;
 }
 
@@ -114,6 +134,7 @@ main {
   display: grid;
   grid-template: none;
   height: 100px;
+  margin-top: 94px;
 }
 
 #top-news .first-news {
@@ -233,14 +254,14 @@ footer {
 #popular ul a:link,
 #deal > .title a:link,
 #deal .element .title a:hover {
-  color : #FF4500;  /*orange */
+  color: #ff4500; /*orange */
   text-decoration: none;
 }
 
 .nav-bar a:hover,
 #latest > .title a:hover,
 #latest .element .author a:hover,
-#funding > .title a:hover, 
+#funding > .title a:hover,
 #funding .top-box a:hover,
 #funding .element a:hover,
 #funding .amount,
@@ -249,22 +270,26 @@ footer {
 #popular .element .title a:hover,
 #popular li a:hover,
 #deal > .title a:hover,
-#deal .element  .title a:link {
-  color : #000;
+#deal .element .title a:link {
+  color: #000;
 }
 
 /* between 750px ~ 1000px */
 @media only screen and (min-width: 750px) {
-  /* header .u-clear {
+  header .taps {
+    display: block;
+  }
+
+  header .u-clear {
     grid-template-columns: auto 40px 180px;
-  } */
+  }
 
   .u-clear .logo {
     display: none;
   }
-  .u-clear .nav-bar {
-    display: grid;
-    grid-column: 1/3;
+
+  .u-clear .nav-bar ul {
+    display: block;
   }
 
   #top-news {

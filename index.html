@@ -18,11 +18,38 @@
 
     <link rel="stylesheet" href="./assets/css/reset.css" type="text/css" />
     <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
+
+    <script>
+      window.onscroll = function() {
+        myFunction();
+      };
+
+      var navbar = document.getElementsByClassName("u-clear");
+      var sticky = navbar.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+    </script>
+
     <title>Clone The Next Web</title>
   </head>
   <body>
-    <header class="top-container">
-      <div class="taps"></div>
+    <header class="top-container sticky">
+      <div class="taps f-xs">
+        <ul>
+          <li>News</li>
+          <li>Events</li>
+          <li>Business</li>
+          <li>AMAs</li>
+          <li>Spaces</li>
+          <li>Terms & Condidtions</li>
+        </ul>
+      </div>
 
       <div class="u-clear">
         <div class="logo">
@@ -82,7 +109,7 @@
 
         <div id="popular">
           <div class="element">
-            <h2 class="title"><a href=#>Apps</a></h2>
+            <h2 class="title"><a href="#">Apps</a></h2>
             <div class="on-head">
               <div class="sort">most popular</div>
               <h3 class="title"><a href="#"> CHEAP</a></h3>
