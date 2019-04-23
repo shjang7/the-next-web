@@ -96,6 +96,7 @@ header .u-clear {
 
 .u-clear .nav-bar {
   margin-left: 20px;
+  border-right: 0.2px lightgray solid;
 }
 
 .u-clear .nav-bar ul {
@@ -113,8 +114,6 @@ header .u-clear {
   text-align: center;
   /* padding: 0 0; */
   color: lightgray;
-  border-left: 0.2px lightgray solid;
-  border-right: 0.2px lightgray solid;
 }
 
 .u-clear .current-time {
@@ -128,6 +127,7 @@ header .message {
   color: black;
   font-weight: 200;
   height: 25px;
+  border-left: 0.2px lightgray solid;
 }
 
 main {
@@ -234,9 +234,23 @@ main {
 }
 
 footer {
-  background: lightgray;
-  height: 250px;
+  box-sizing: border-box;
+  background: #000;
+  height: 500px;
   width: 100%;
+  text-align: center;
+  padding: 50px;
+}
+
+footer .text {
+  margin: 20px auto;
+}
+
+footer .text li {
+  display: inline;
+  text-align: center;
+  padding: 0 10px;
+  text-transform: uppercase;
 }
 
 a:link {
@@ -251,15 +265,16 @@ a:link {
 #funding .element .title a:link,
 #popular .on-head .sort,
 #popular .on-head > .title,
-#popular .on-head > .title a
-#popular .author a:hover,
-footer .link .text a:hover {
+#popular .on-head > .title a #popular .author a:hover,
+.icons i,
+footer .link a:hover {
   color: white;
 }
 
 #top-news .author-box,
 #top-news .author-box a,
-#popular ul a:link {
+#popular ul a:link,
+footer .text li a:link {
   color: gray;
 }
 
