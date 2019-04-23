@@ -294,6 +294,10 @@ footer .copyright span {
   display: block;
 }
 
+footer img {
+  width: 35px;
+}
+
 footer .copyright span strong {
   color: red;
 }
