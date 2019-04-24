@@ -158,14 +158,25 @@ main {
 
 #top-news .element {
   margin: 5px;
-  padding: 10px;
+  padding: 20px;
   box-sizing: border-box;
+  display: grid;
+  grid-template-rows: auto 60px;
 }
 
-#top-news .empty {
+#top-news .logo {
+  width: 300px;
+}
+
+#top-news .logo-box .text {
+  display: inline;
+  float: right;
+}
+
+#top-news .logo-box {
   width: 100%;
-  height: 110px;
-  background: rgba(100, 200, 200, 0.5);
+  height: 100%;
+  display: none;
 }
 
 #top-news .title {
@@ -220,7 +231,6 @@ main {
 #deal .h-title {
   width: 100%;
   height: 40px;
-  background-color: hsla(270, 60%, 40%, 0.7);
 }
 
 #latest > .element,
@@ -385,6 +395,7 @@ a {
 #top-news .sort,
 #top-news .title,
 #top-news .author a:hover,
+#top-news .logo-box .text,
 #funding .element .title a,
 #popular .on-head .sort,
 #popular .on-head > .title,
@@ -462,10 +473,6 @@ footer .copyright b {
     grid-template: repeat(2, 200px) / 65% 35%;
   }
 
-  #top-news .first-news .empty {
-    height: 320px;
-  }
-
   #top-news .first-news {
     grid-row: 1/3;
     grid-column: 1;
@@ -514,8 +521,8 @@ footer .copyright b {
     grid-template-rows: repeat(2, 250px);
   }
 
-  #top-news .first-news .empty {
-    height: 420px;
+  #top-news .logo-box {
+    display: block;
   }
 
   #top-news .first-news {
@@ -534,13 +541,6 @@ footer .copyright b {
         rgba(255, 0, 100, 0.4) 100%
       ),
       url(./../images/newe-796x531.png) 100% 50% / cover no-repeat;
-  }
-
-  #top-news .rest-news .empty {
-    height: 160px;
-  }
-
-  #top-news .rest-news {
   }
 
   #latest .element,

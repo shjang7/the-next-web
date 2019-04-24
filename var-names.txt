@@ -37,11 +37,13 @@ body : deep gray, some : black,
 [main]
 top-news ->  bg: image, grid
   first-news, rest-news
-    sort : Apps, tech -> color: white
-    title : h tag, h1,h2 -> color: white,
-    author-box
-      author : by someone -> color: gray hover : white
-      time, icons
+    empty? logo?
+    text
+      sort : Apps, tech -> color: white
+      title : h tag, h1,h2 -> color: white,
+      author-box
+        author : by someone -> color: gray hover : white
+        time, icons
 
 Media :
   latest, funding, deal : col: 4(1000up), 3(750up),1(default)
@@ -67,9 +69,10 @@ funding
         bottom : bg: pink;
           amount : h4, color:black
           series : gray
-      tech
-      funding-company
-      comment, span: f-c-lg
+      text div
+        tech
+        funding-company
+        comment, span: f-c-lg
 popular: (section or div) ->includes apps, gear, tech
   element div
     title ->(Apps), h2,orange,(hover)black
