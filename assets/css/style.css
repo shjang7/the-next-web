@@ -78,6 +78,8 @@ header {
   width: 100%;
   position: fixed;
   top: 0px;
+  z-index: 99;
+  box-shadow: #ccc 1px 0px 5px;
 }
 
 header .taps {
@@ -181,27 +183,57 @@ main {
 }
 
 #top-news .first-news {
-  background: linear-gradient(0deg,rgba(0, 0, 0, 1) 0%,rgba(0, 0, 0, 0.3) 100%),url(./../images/newe-796x531.png) 100% 50% / cover no-repeat;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    ),
+    url(./../images/newe-796x531.png) 100% 50% / cover no-repeat;
 }
 
 #top-news .first-news:hover {
-  background: linear-gradient(0deg,rgba(0, 0, 0, 1) 0%,rgba(0, 0, 0, 0.1) 100%),url(./../images/newe-796x531.png) 100% 50% / cover no-repeat;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.1) 100%
+    ),
+    url(./../images/newe-796x531.png) 100% 50% / cover no-repeat;
 }
 
 #top-news .rest-news {
-  background: linear-gradient(0deg,rgba(0, 0, 0, 1) 0%,rgba(0, 0, 0, 0.3) 100%),url(./../images/google-protest-368x276.png) 100% 50% / cover no-repeat;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    ),
+    url(./../images/google-protest-368x276.png) 100% 50% / cover no-repeat;
 }
 
 #top-news .rest-news:hover {
-  background: linear-gradient(0deg,rgba(0, 0, 0, 1) 0%,rgba(0, 0, 0, 0.1) 100%),url(./../images/google-protest-368x276.png) 100% 50% / cover no-repeat;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.1) 100%
+    ),
+    url(./../images/google-protest-368x276.png) 100% 50% / cover no-repeat;
 }
 
 #top-news .rest-news:nth-child(2) {
-  background: linear-gradient(0deg,rgba(0, 0, 0, 1) 0%,rgba(0, 0, 0, 0.3) 100%),url(./../images/lenovo-368x276.png) 100% 50% / cover no-repeat;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    ),
+    url(./../images/lenovo-368x276.png) 100% 50% / cover no-repeat;
 }
 
 #top-news .rest-news:nth-child(2):hover {
-  background: linear-gradient(0deg,rgba(0, 0, 0, 1) 0%,rgba(0, 0, 0, 0.1) 100%),url(./../images/lenovo-368x276.png) 100% 50% / cover no-repeat;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.1) 100%
+    ),
+    url(./../images/lenovo-368x276.png) 100% 50% / cover no-repeat;
 }
 
 .wrapper {
@@ -272,6 +304,8 @@ main {
 #funding .element {
   width: 100%;
   height: 300px;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
 #funding .logo {
@@ -279,11 +313,12 @@ main {
   margin-top: 10px;
   margin-left: 15px;
   height: 60px;
+  width: 60px;
 }
 #funding .title {
   height: 35px;
   padding-left: 95px;
-  padding-top: 10px;
+  padding-top: 15px;
   background: #ff4500;
 }
 
@@ -293,8 +328,14 @@ main {
   padding-top: 10px;
   background: #f4e6e1;
 }
+
+#funding .series {
+  text-transform: uppercase;
+}
+
 #funding .text {
   background: #f9f6f6;
+  height: 60%;
 }
 
 #funding .tech,
@@ -325,7 +366,7 @@ main {
 #popular .element {
   width: 100%;
   height: 500px;
-  padding: 0px;/*temp*/
+  padding: 0px; /*temp*/
   box-sizing: border-box;
 }
 
@@ -337,14 +378,14 @@ main {
   flex-flow: column nowrap;
   justify-content: flex-end;
   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
-    url(./../images/philips-hue-starter-kit-header-image-516x270.png) 50% 50% / cover no-repeat;
+    url(./../images/philips-hue-starter-kit-header-image-516x270.png) 50% 50% /
+      cover no-repeat;
 }
 
 #popular .on-head .empty {
   width: 100%;
   height: 100%;
 }
-
 
 #popular .second-box {
   height: 150px;
@@ -505,6 +546,10 @@ footer .copyright b {
     text-transform: capitalize;
   }
 
+  /* #funding .top-box .h-title {
+    display: inline;
+  } */
+
   #funding .top-box span {
     display: inline-block;
     padding: 0 10px;
@@ -513,6 +558,10 @@ footer .copyright b {
 
   #funding .top-box span:last-of-type {
     border: none;
+  }
+
+  #funding .element:last-child {
+    display: none;
   }
 
   #latest .element,
@@ -560,6 +609,22 @@ footer .copyright b {
         rgba(255, 0, 100, 0.4) 100%
       ),
       url(./../images/newe-796x531.png) 100% 50% / cover no-repeat;
+  }
+
+  #funding .top-box .h-title {
+    display: inline;
+  }
+
+  #funding .top-box span {
+    float: right;
+  }
+
+  #funding .top-box span:first-of-type {
+    border: none;
+  }
+
+  #funding .element:last-child {
+    display: block;
   }
 
   #latest .element,
