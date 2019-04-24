@@ -263,11 +263,8 @@ main {
 #latest > .element,
 #deal > .element {
   background: lightpink;
-  /*border: 1px blue solid;*/
   padding: 10px;
   width: 100%;
-  /* height: 100px; */
-  /*margin: 0.8%;*/
   box-sizing: border-box;
 }
 
@@ -365,15 +362,16 @@ main {
 
 #popular .element {
   width: 100%;
-  height: 500px;
-  padding: 0px; /*temp*/
+  height: 100%;
+  padding: 10px;
   box-sizing: border-box;
 }
 
 #popular .on-head {
   width: 100%;
   height: 70vw;
-  background: yellow;
+  padding: 10px;
+  box-sizing: border-box;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
@@ -388,12 +386,19 @@ main {
 }
 
 #popular .second-box {
-  height: 150px;
-  background-color: #ffccdd;
+  height: 100px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #ffecec;
 }
 
-#popular .element:nth-child(2n) {
-  background-color: #afa; /*temp*/
+#popular .second-box .title {
+  font-weight: 600;
+}
+
+#popular li {
+  padding: 5px 3px;
+  border-bottom: #ccc 1px solid;
 }
 
 footer {
@@ -445,6 +450,7 @@ a {
 
 .taps:focus,
 .taps:hover,
+.icons i,
 #top-news .sort,
 #top-news .title,
 #top-news .author a:hover,
@@ -454,7 +460,6 @@ a {
 #popular .on-head > .title,
 #popular .on-head > .title a,
 #popular .author a:hover,
-.icons i,
 footer .link .text a:hover {
   color: white;
 }
@@ -465,13 +470,16 @@ footer .link .text a:hover {
 .nav-bar a,
 .u-clear .search,
 .u-clear .search a,
-.author-box,
-.author a,
-#popular li a,
+#top-news .author-box,
+#top-news .author a,
 footer .text a,
 footer .copyright b {
   color: lightgray;
 }
+
+.author-box,
+.author a,
+#popular ul a,
 #funding .series,
 #funding .text a {
   color: gray;
@@ -484,7 +492,7 @@ footer .copyright b {
 #popular .h-title a,
 #popular .second-box,
 #popular .second-box a,
-#popular ul a,
+#popular ul a span,
 #deal .h-title a,
 #deal .element .title a:hover {
   color: #ff4500; /*orange */
@@ -499,8 +507,8 @@ footer .copyright b {
 #funding .amount,
 #funding .tech a:hover,
 #funding .funding-company a:hover,
-#popular .element .title a:hover,
-#popular li a:hover,
+#popular .element .h-title a:hover,
+#popular ul a:hover,
 #deal .h-title a:hover,
 #deal .element .title a {
   color: #000;
@@ -575,7 +583,7 @@ footer .copyright b {
   }
 
   #popular .on-head {
-    height: 40vw;
+    height: 35vw;
   }
 
   footer .copyright span {
