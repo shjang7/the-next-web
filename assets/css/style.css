@@ -131,7 +131,6 @@ header .message {
 }
 
 main {
-  background: lightgoldenrodyellow;
   width: 100%;
 }
 
@@ -185,12 +184,26 @@ main {
   background-color: yellow;
 }
 
+#funding {
+}
+
+#funding .top-box {
+  width: 100%;
+  margin: 20px 0;
+}
+
+#funding .top-box span {
+  margin-top: 15px;
+  display: block;
+}
+
 #latest,
 #funding,
 #deal {
   display: flex;
   flex-flow: row wrap;
-  background: #ff7;
+  margin: 0 15px;
+  /* background: #ff7; */
 }
 
 #latest > .title,
@@ -408,6 +421,16 @@ footer .text li a:link {
     text-transform: capitalize;
   }
 
+  #funding .top-box span {
+    display: inline-block;
+    padding: 0 10px;
+    border-right: 1px #ff4500 solid;
+  }
+
+  #funding .top-box span:last-of-type {
+    border: none;
+  }
+
   #latest .element,
   #funding .element,
   #deal .element {
@@ -434,8 +457,8 @@ footer .text li a:link {
     height: 500px;
     background: linear-gradient(
         0deg,
-        rgba(0,0,0,1) 0%,
-        rgba(255,0,100,.5) 100%
+        rgba(0, 0, 0, 1) 0%,
+        rgba(255, 0, 100, 0.5) 100%
       ),
       url(./../images/newe-796x531.png) 100% 50% / cover no-repeat;
   }
@@ -443,8 +466,8 @@ footer .text li a:link {
   #top-news .first-news:hover {
     background: linear-gradient(
         0deg,
-        rgba(0,0,0,1) 0%,
-        rgba(255,0,100,.4) 100%
+        rgba(0, 0, 0, 1) 0%,
+        rgba(255, 0, 100, 0.4) 100%
       ),
       url(./../images/newe-796x531.png) 100% 50% / cover no-repeat;
   }
