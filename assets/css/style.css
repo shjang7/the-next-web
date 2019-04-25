@@ -455,6 +455,10 @@ footer .text {
   margin: 20px auto;
 }
 
+footer .icons {
+  display: none;
+}
+
 footer .text li {
   display: inline;
   text-align: center;
@@ -559,6 +563,12 @@ footer .copyright b {
 #deal .top-box span a:hover,
 #deal .element .title a {
   color: #000;
+}
+
+@media only screen and (min-width: 480px) {
+  footer .icons {
+    display: block;
+  }
 }
 
 /* between 750px ~ 1000px */
