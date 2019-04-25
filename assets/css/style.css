@@ -126,8 +126,6 @@ header .u-clear {
 
 .u-clear .search {
   text-align: center;
-  /* padding: 0 0; */
-  color: lightgray;
 }
 
 .u-clear .current-time {
@@ -140,7 +138,7 @@ header .message {
   text-align: center;
   color: black;
   font-weight: 200;
-  height: 25px;
+  padding: 5px 0;
   border-left: 0.2px lightgray solid;
 }
 
@@ -150,7 +148,7 @@ main {
 
 #head-news {
   display: grid;
-  grid-template-rows: repeat(3, 200px);
+  grid-template-rows: repeat(3, 28vh);
   margin-top: 74px;
 }
 
@@ -179,8 +177,9 @@ main {
 }
 
 #head-news .title {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 900;
+  line-height: 1.1;
 }
 
 #head-news .first-news {
@@ -189,7 +188,7 @@ main {
       rgba(0, 0, 0, 1) 0%,
       rgba(0, 0, 0, 0.3) 100%
     ),
-    url(./../images/newe-796x531.png) 100% 50% / cover no-repeat;
+    url(./../images/head-1.png) 100% 50% / cover no-repeat;
 }
 
 #head-news .first-news:hover {
@@ -198,7 +197,7 @@ main {
       rgba(0, 0, 0, 1) 0%,
       rgba(0, 0, 0, 0.1) 100%
     ),
-    url(./../images/newe-796x531.png) 100% 50% / cover no-repeat;
+    url(./../images/head-2.png) 100% 50% / cover no-repeat;
 }
 
 #head-news .rest-news {
@@ -207,7 +206,7 @@ main {
       rgba(0, 0, 0, 1) 0%,
       rgba(0, 0, 0, 0.3) 100%
     ),
-    url(./../images/google-protest-368x276.png) 100% 50% / cover no-repeat;
+    url(./../images/head-3.png) 100% 50% / cover no-repeat;
 }
 
 #head-news .rest-news:hover {
@@ -376,25 +375,36 @@ main {
 
 #popular .apps .on-head {
   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
-    url(./../images/philips-hue-starter-kit-header-image-516x270.png) 50% 50% /
+    url(./../images/apps-1.png) 50% 50% /
       cover no-repeat;
 }
 
 #popular .on-head .empty {
   width: 100%;
   height: 100%;
-  background: pink;
 }
 
 #popular .second-box {
-  height: 100px;
-  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   box-sizing: border-box;
   background-color: #ffecec;
 }
 
+#popular .second-box .text {
+  padding: 10px;
+}
+
 #popular .second-box .title {
+  max-height: 100%;
   font-weight: 600;
+  overflow: hidden;
+}
+
+#popular .second-box img {
+  width: 100px;
+  height: 100px;
 }
 
 #popular li {
@@ -504,15 +514,18 @@ footer .link .text a:hover {
 
 .taps,
 .taps a,
-.nav-bar,
-.nav-bar a,
 .u-clear .search,
 .u-clear .search a,
-#head-news .author-box,
-#head-news .author a,
 footer .text a,
 footer .copyright b {
   color: lightgray;
+}
+
+.nav-bar,
+.nav-bar a,
+#head-news .author-box,
+#head-news .author a {
+  color: gray;
 }
 
 .author-box,
@@ -571,8 +584,8 @@ footer .copyright b {
   }
 
   #head-news {
-    margin-top: 94px;
-    grid-template: repeat(2, 180px) / 65% 35%;
+    margin-top: 96px;
+    grid-template: repeat(2, 28vh) / 65% 35%;
   }
 
   #head-news .first-news {
@@ -589,7 +602,7 @@ footer .copyright b {
   }
 
   #head-news .first-news .title {
-    font-size: 40px;
+    font-size: 36px;
   }
 
   #head-news .author a {
@@ -642,7 +655,7 @@ footer .copyright b {
 /* 1000px and up */
 @media only screen and (min-width: 1000px) {
   #head-news {
-    grid-template-rows: repeat(2, 250px);
+    grid-template-rows: repeat(2, 35vh);
   }
 
   #head-news .logo-box {
@@ -650,20 +663,22 @@ footer .copyright b {
   }
 
   #head-news .first-news .title {
-    font-size: 56px;
+    font-size: 50px;
   }
 
   #head-news .rest-news .title {
-    font-size: 30px;
+    font-size: 26px;
   }
 
   #head-news .first-news {
     background: linear-gradient(
-        0deg,
+        340deg,
         rgba(0, 0, 0, 1) 0%,
-        rgba(255, 0, 100, 0.5) 100%
+        rgba(0, 0, 0, .8) 40%,
+        rgba(190, 40, 80, 0.7) 60%,
+        rgba(255, 50, 100, 0.6) 100%
       ),
-      url(./../images/newe-796x531.png) 100% 50% / cover no-repeat;
+      url(./../images/head-1.png) 100% 50% / cover no-repeat;
   }
 
   #head-news .first-news:hover {
@@ -672,7 +687,7 @@ footer .copyright b {
         rgba(0, 0, 0, 1) 0%,
         rgba(255, 0, 100, 0.4) 100%
       ),
-      url(./../images/newe-796x531.png) 100% 50% / cover no-repeat;
+      url(./../images/head-1.png) 100% 50% / cover no-repeat;
   }
 
   #funding .top-box .h-title {
@@ -708,6 +723,6 @@ footer .copyright b {
   }
 
   #popular .on-head {
-    height: 30vw;
+    height: 22vw;
   }
 }
