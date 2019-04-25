@@ -249,7 +249,6 @@ main {
 #deal {
   display: flex;
   flex-flow: row wrap;
-  /* background: #ff7; */
 }
 
 #latest .h-title,
@@ -260,28 +259,22 @@ main {
   height: 40px;
 }
 
-#latest > .element,
-#deal > .element {
-  /* background: lightpink; */
+#latest .element,
+#deal .element {
   padding: 10px;
   width: 100%;
   box-sizing: border-box;
 }
 
-#latest .element:nth-child(4n-1) {
-  background-color: yellow;
+#latest .element{
+  display: grid;
+  grid-template: 75px / 75px auto;
 }
 
-#latest > .element:nth-child(4n-2) {
-  background-color: pink;
-}
-
-#latest > .element:nth-child(4n-3) {
-  background-color: green;
-}
-
-#latest > .element:nth-child(4n) {
-  background-color: lightgray;
+#latest .element img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 #funding .top-box {
@@ -373,11 +366,12 @@ main {
   justify-content: flex-end;
 }
 
-#popular .apps .on-head {
+#popular .on-head {
   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
-    url(./../images/apps-1.png) 50% 50% /
+    url(./../images/apps-1.jpg) 50% 50% /
       cover no-repeat;
 }
+
 
 #popular .on-head .empty {
   width: 100%;
@@ -530,6 +524,7 @@ footer .copyright b {
 
 .author-box,
 .author a,
+#latest .element .title a,
 #popular ul a,
 #funding .series,
 #funding .text a {
@@ -607,6 +602,14 @@ footer .copyright b {
 
   #head-news .author a {
     text-transform: capitalize;
+  }
+
+  #latest .element{
+    grid-template: repeat(2,auto) / 100%;
+  }
+
+  #latest .title {
+    margin: 5px 0;
   }
 
   #funding .top-box span {
