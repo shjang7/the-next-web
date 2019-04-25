@@ -266,7 +266,7 @@ main {
   box-sizing: border-box;
 }
 
-#latest .element{
+#latest .element {
   display: grid;
   grid-template: 75px / 75px auto;
 }
@@ -368,10 +368,8 @@ main {
 
 #popular .on-head {
   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
-    url(./../images/apps-1.jpg) 50% 50% /
-      cover no-repeat;
+    url(./../images/apps-1.jpg) 50% 50% / cover no-repeat;
 }
-
 
 #popular .on-head .empty {
   width: 100%;
@@ -408,11 +406,12 @@ main {
 
 #deal .top-box {
   width: 100%;
-  margin: 20px 0;
+  margin-top: 20px;
+  padding: 0 10px;
 }
 
 #deal .top-box span {
-  margin-top: 15px;
+  padding-top: 10px;
   display: block;
 }
 
@@ -540,6 +539,7 @@ footer .copyright b {
 #popular .second-box a,
 #popular ul a span,
 #deal .h-title a,
+#deal .top-box span a,
 #deal .element .title a:hover {
   color: #ff4500; /*orange */
 }
@@ -556,6 +556,7 @@ footer .copyright b {
 #popular .element .h-title a:hover,
 #popular ul a:hover,
 #deal .h-title a:hover,
+#deal .top-box span a:hover,
 #deal .element .title a {
   color: #000;
 }
@@ -604,8 +605,8 @@ footer .copyright b {
     text-transform: capitalize;
   }
 
-  #latest .element{
-    grid-template: repeat(2,auto) / 100%;
+  #latest .element {
+    grid-template: repeat(2, auto) / 100%;
   }
 
   #latest .title {
@@ -624,6 +625,14 @@ footer .copyright b {
 
   #funding .element:last-child {
     display: none;
+  }
+
+  #deal .h-title {
+    display: inline;
+  }
+
+  #deal .top-box span a {
+    float: right;
   }
 
   #deal .element {
@@ -677,7 +686,7 @@ footer .copyright b {
     background: linear-gradient(
         340deg,
         rgba(0, 0, 0, 1) 0%,
-        rgba(0, 0, 0, .8) 40%,
+        rgba(0, 0, 0, 0.8) 40%,
         rgba(190, 40, 80, 0.7) 60%,
         rgba(255, 50, 100, 0.6) 100%
       ),
