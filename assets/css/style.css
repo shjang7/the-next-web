@@ -96,6 +96,10 @@ header .taps li {
   margin: 0 10px;
 }
 
+header .taps .current a {
+  color: white;
+}
+
 header .u-clear {
   display: grid;
   grid-template-columns: 102px auto 40px 180px;
@@ -147,9 +151,10 @@ main {
 }
 
 #head-news {
+  margin-top: 100px;
+  margin-bottom: 20px;
   display: grid;
   grid-template-rows: repeat(3, 28vh);
-  margin-top: 74px;
 }
 
 #head-news .element {
@@ -215,7 +220,7 @@ main {
       rgba(0, 0, 0, 1) 0%,
       rgba(0, 0, 0, 0.1) 100%
     ),
-    url(./../images/google-protest-368x276.png) 100% 50% / cover no-repeat;
+    url(./../images/head-3.png) 100% 50% / cover no-repeat;
 }
 
 #head-news .rest-news:nth-child(2) {
@@ -251,12 +256,20 @@ main {
   flex-flow: row wrap;
 }
 
-#latest .h-title,
-#popular .h-title,
-#funding .h-title,
-#deal .h-title {
+.h-title {
   width: 100%;
   height: 40px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+
+#funding .top-box,
+#deal .top-box {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 0 10px;
 }
 
 #latest .element,
@@ -275,11 +288,6 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-#funding .top-box {
-  width: 100%;
-  margin: 20px 0;
 }
 
 #funding .top-box span {
@@ -301,6 +309,7 @@ main {
   height: 60px;
   width: 60px;
 }
+
 #funding .title {
   height: 35px;
   padding-left: 95px;
@@ -404,32 +413,22 @@ main {
   border-bottom: #ccc 1px solid;
 }
 
-#deal .top-box {
-  width: 100%;
-  margin-top: 20px;
-  padding: 0 10px;
-}
-
 #deal .top-box span {
-  padding-top: 10px;
-  display: block;
+  height: 100%;
+  display: inline;
 }
 
 #deal .element {
   display: grid;
-  grid-template-columns: 100px auto;
-  grid-auto-rows: 75px;
+  grid-template-columns: 75px auto;
+  grid-gap: 15px;
+  grid-row-gap: 10px;
 }
 
 #deal .element img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  /* margin-right: 20px; */
-}
-
-#deal .text {
-  padding-left: 25px;
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
 }
 
 #deal .price span:first-of-type {
@@ -445,10 +444,10 @@ main {
 footer {
   box-sizing: border-box;
   background: #000;
-  height: 300px;
   width: 100%;
   text-align: center;
   padding: 50px;
+  margin-top: 20px;
 }
 
 footer .text {
@@ -590,7 +589,7 @@ footer .copyright b {
   }
 
   #head-news {
-    margin-top: 96px;
+    margin-top: 100px;
     grid-template: repeat(2, 28vh) / 65% 35%;
   }
 
@@ -648,11 +647,13 @@ footer .copyright b {
   #deal .element {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 25vw auto;
+    grid-template-rows: 23vw auto;
   }
 
-  #deal .text {
-    padding-left: 0;
+  #deal .element img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   #latest .element,
@@ -731,7 +732,7 @@ footer .copyright b {
   #deal .element {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 22vw auto;
+    grid-template-rows: 17vw auto;
   }
 
   #latest .element,

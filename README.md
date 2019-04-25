@@ -2,10 +2,6 @@
 
 #### An Odin Project for responsive design
 
-## Demo version
-
-- [Project Demo](https://shjang7.github.io/the-next-web/)
-
 ## Website
 
 - [Original WebSite](https://thenextweb.com/)
@@ -18,6 +14,11 @@
 
 - [Suhyeon Jang](https://github.com/shjang7)
 
+## Demo version
+
+- [Project Demo](https://shjang7.github.io/the-next-web/)
+
 ## Explanation
 
-- responsive design
+- Along with screen size, objects resize. <br/>
+  In accordance with user mouse focusing, fonts colors change. 
