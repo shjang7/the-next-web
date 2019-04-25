@@ -35,7 +35,7 @@ f-c-lg /
 
 body : deep gray, some : black,
 [main]
-top-news ->  bg: image, grid
+head-news ->  bg: image, grid
   first-news, rest-news
     empty? logo?
     text

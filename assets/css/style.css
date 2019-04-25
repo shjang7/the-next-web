@@ -16,7 +16,7 @@ h3,
 h4,
 h5,
 h6 {
-  line-height: 1;
+  line-height: 1.2;
   font-weight: 700;
 }
 
@@ -148,41 +148,42 @@ main {
   width: 100%;
 }
 
-#top-news {
+#head-news {
   display: grid;
   grid-template-rows: repeat(3, 200px);
   margin-top: 74px;
 }
 
-#top-news .element {
+#head-news .element {
   margin: 5px;
   padding: 20px;
   box-sizing: border-box;
-  display: grid;
-  grid-template-rows: auto 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-#top-news .logo {
+#head-news .logo-box {
+  width: 100%;
+  height: inherit;
+  display: none;
+}
+
+#head-news .logo {
   width: 300px;
 }
 
-#top-news .logo-box .text {
+#head-news .logo-box .text {
   display: inline;
   float: right;
 }
 
-#top-news .logo-box {
-  width: 100%;
-  height: 100%;
-  display: none;
+#head-news .title {
+  font-size: 22px;
+  font-weight: 900;
 }
 
-#top-news .title {
-  font-size: 20px;
-  font-weight: 700;
-}
-
-#top-news .first-news {
+#head-news .first-news {
   background: linear-gradient(
       0deg,
       rgba(0, 0, 0, 1) 0%,
@@ -191,7 +192,7 @@ main {
     url(./../images/newe-796x531.png) 100% 50% / cover no-repeat;
 }
 
-#top-news .first-news:hover {
+#head-news .first-news:hover {
   background: linear-gradient(
       0deg,
       rgba(0, 0, 0, 1) 0%,
@@ -200,7 +201,7 @@ main {
     url(./../images/newe-796x531.png) 100% 50% / cover no-repeat;
 }
 
-#top-news .rest-news {
+#head-news .rest-news {
   background: linear-gradient(
       0deg,
       rgba(0, 0, 0, 1) 0%,
@@ -209,7 +210,7 @@ main {
     url(./../images/google-protest-368x276.png) 100% 50% / cover no-repeat;
 }
 
-#top-news .rest-news:hover {
+#head-news .rest-news:hover {
   background: linear-gradient(
       0deg,
       rgba(0, 0, 0, 1) 0%,
@@ -218,7 +219,7 @@ main {
     url(./../images/google-protest-368x276.png) 100% 50% / cover no-repeat;
 }
 
-#top-news .rest-news:nth-child(2) {
+#head-news .rest-news:nth-child(2) {
   background: linear-gradient(
       0deg,
       rgba(0, 0, 0, 1) 0%,
@@ -227,7 +228,7 @@ main {
     url(./../images/lenovo-368x276.png) 100% 50% / cover no-repeat;
 }
 
-#top-news .rest-news:nth-child(2):hover {
+#head-news .rest-news:nth-child(2):hover {
   background: linear-gradient(
       0deg,
       rgba(0, 0, 0, 1) 0%,
@@ -268,22 +269,18 @@ main {
   box-sizing: border-box;
 }
 
-#deal .element:nth-child(4n-1),
 #latest .element:nth-child(4n-1) {
   background-color: yellow;
 }
 
-#deal .element:nth-child(4n-2),
 #latest > .element:nth-child(4n-2) {
   background-color: pink;
 }
 
-#deal .element:nth-child(4n-3),
 #latest > .element:nth-child(4n-3) {
   background-color: green;
 }
 
-#deal .element:nth-child(4n),
 #latest > .element:nth-child(4n) {
   background-color: lightgray;
 }
@@ -369,12 +366,15 @@ main {
 
 #popular .on-head {
   width: 100%;
-  height: 70vw;
+  height: 64vw;
   padding: 10px;
   box-sizing: border-box;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
+}
+
+#popular .apps .on-head {
   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
     url(./../images/philips-hue-starter-kit-header-image-516x270.png) 50% 50% /
       cover no-repeat;
@@ -383,6 +383,7 @@ main {
 #popular .on-head .empty {
   width: 100%;
   height: 100%;
+  background: pink;
 }
 
 #popular .second-box {
@@ -422,7 +423,7 @@ main {
   object-fit: cover;
   margin-right: 20px;
 }
-/* 
+/*
 #deal .text {
   float: left;
 } */
@@ -477,10 +478,10 @@ a {
 .taps:focus,
 .taps:hover,
 .icons i,
-#top-news .sort,
-#top-news .title,
-#top-news .author a:hover,
-#top-news .logo-box .text,
+#head-news .sort,
+#head-news .title,
+#head-news .author a:hover,
+#head-news .logo-box .text,
 #funding .element .title a,
 #popular .on-head .sort,
 #popular .on-head > .title,
@@ -496,8 +497,8 @@ footer .link .text a:hover {
 .nav-bar a,
 .u-clear .search,
 .u-clear .search a,
-#top-news .author-box,
-#top-news .author a,
+#head-news .author-box,
+#head-news .author a,
 footer .text a,
 footer .copyright b {
   color: lightgray;
@@ -508,7 +509,7 @@ footer .copyright b {
 #popular ul a,
 #funding .series,
 #funding .text a {
-  color: gray;
+  color: #555;
 }
 
 #latest .h-title a,
@@ -558,25 +559,29 @@ footer .copyright b {
     display: block;
   }
 
-  #top-news {
+  #head-news {
     margin-top: 94px;
-    grid-template: repeat(2, 200px) / 65% 35%;
+    grid-template: repeat(2, 180px) / 65% 35%;
   }
 
-  #top-news .first-news {
+  #head-news .first-news {
     grid-row: 1/3;
     grid-column: 1;
   }
 
-  #top-news .rest-news {
+  #head-news .rest-news {
     grid-column: 2;
   }
 
-  #top-news .sort {
+  #head-news .sort {
     text-transform: uppercase;
   }
 
-  #top-news .author a {
+  #head-news .first-news .title {
+    font-size: 40px;
+  }
+
+  #head-news .author a {
     text-transform: capitalize;
   }
 
@@ -621,15 +626,23 @@ footer .copyright b {
 
 /* 1000px and up */
 @media only screen and (min-width: 1000px) {
-  #top-news {
+  #head-news {
     grid-template-rows: repeat(2, 250px);
   }
 
-  #top-news .logo-box {
+  #head-news .logo-box {
     display: block;
   }
 
-  #top-news .first-news {
+  #head-news .first-news .title {
+    font-size: 56px;
+  }
+
+  #head-news .rest-news .title {
+    font-size: 30px;
+  }
+
+  #head-news .first-news {
     background: linear-gradient(
         0deg,
         rgba(0, 0, 0, 1) 0%,
@@ -638,7 +651,7 @@ footer .copyright b {
       url(./../images/newe-796x531.png) 100% 50% / cover no-repeat;
   }
 
-  #top-news .first-news:hover {
+  #head-news .first-news:hover {
     background: linear-gradient(
         0deg,
         rgba(0, 0, 0, 1) 0%,
