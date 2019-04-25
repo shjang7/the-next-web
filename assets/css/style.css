@@ -41,7 +41,7 @@ h5 {
 }
 
 h6 {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .f-xxs {
@@ -263,7 +263,7 @@ main {
 
 #latest > .element,
 #deal > .element {
-  background: lightpink;
+  /* background: lightpink; */
   padding: 10px;
   width: 100%;
   box-sizing: border-box;
@@ -415,18 +415,29 @@ main {
 #deal .element {
   display: grid;
   grid-template-columns: 100px auto;
+  grid-auto-rows: 75px;
 }
 
 #deal .element img {
-  width: 75px;
-  height: 75px;
-  object-fit: cover;
-  margin-right: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* margin-right: 20px; */
 }
-/*
+
 #deal .text {
-  float: left;
-} */
+  padding-left: 25px;
+}
+
+#deal .price span:first-of-type {
+  font-style: oblique;
+  text-decoration: line-through;
+  color: lightgray;
+}
+
+#deal .price span:last-of-type {
+  font-weight: 500;
+}
 
 footer {
   box-sizing: border-box;
@@ -601,8 +612,12 @@ footer .copyright b {
 
   #deal .element {
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 100px auto;
+    grid-template-columns: 100%;
+    grid-template-rows: 25vw auto;
+  }
+
+  #deal .text {
+    padding-left: 0;
   }
 
   #latest .element,
@@ -674,6 +689,12 @@ footer .copyright b {
 
   #funding .element:last-child {
     display: block;
+  }
+
+  #deal .element {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 22vw auto;
   }
 
   #latest .element,
