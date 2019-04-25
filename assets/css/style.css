@@ -401,6 +401,32 @@ main {
   border-bottom: #ccc 1px solid;
 }
 
+#deal .top-box {
+  width: 100%;
+  margin: 20px 0;
+}
+
+#deal .top-box span {
+  margin-top: 15px;
+  display: block;
+}
+
+#deal .element {
+  display: grid;
+  grid-template-columns: 100px auto;
+}
+
+#deal .element img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+/* 
+#deal .text {
+  float: left;
+} */
+
 footer {
   box-sizing: border-box;
   background: #000;
@@ -554,10 +580,6 @@ footer .copyright b {
     text-transform: capitalize;
   }
 
-  /* #funding .top-box .h-title {
-    display: inline;
-  } */
-
   #funding .top-box span {
     display: inline-block;
     padding: 0 10px;
@@ -570,6 +592,12 @@ footer .copyright b {
 
   #funding .element:last-child {
     display: none;
+  }
+
+  #deal .element {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 100px auto;
   }
 
   #latest .element,
