@@ -380,37 +380,37 @@ main {
 
 #popular .gear .on-head {
   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
-    url(./../images/apps-1.jpg) 50% 50% / cover no-repeat;
+    url(./../images/gear-1.jpg) 50% 50% / cover no-repeat;
 }
 
 #popular .tech .on-head {
   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
-    url(./../images/apps-1.jpg) 50% 50% / cover no-repeat;
+    url(./../images/tech-1.jpg) 50% 50% / cover no-repeat;
 }
 
 #popular .creative .on-head {
   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
-    url(./../images/apps-1.jpg) 50% 50% / cover no-repeat;
+    url(./../images/creative-1.jpg) 50% 50% / cover no-repeat;
 }
 
 #popular .podium .on-head {
   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
-    url(./../images/apps-1.jpg) 50% 50% / cover no-repeat;
+    url(./../images/podium-1.jpg) 50% 50% / cover no-repeat;
 }
 
 #popular .insights .on-head {
   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
-    url(./../images/apps-1.jpg) 50% 50% / cover no-repeat;
+    url(./../images/insights-1.jpg) 50% 50% / cover no-repeat;
 }
 
 #popular .launch .on-head {
   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
-    url(./../images/apps-1.jpg) 50% 50% / cover no-repeat;
+    url(./../images/launch-1.jpg) 50% 50% / cover no-repeat;
 }
 
 #popular .distract .on-head {
   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
-    url(./../images/apps-1.jpg) 50% 50% / cover no-repeat;
+    url(./../images/distract-1.jpg) 50% 50% / cover no-repeat;
 }
 
 #popular .on-head .empty {
