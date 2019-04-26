@@ -446,12 +446,12 @@ footer {
   background: #000;
   width: 100%;
   text-align: center;
-  padding: 50px;
+  padding: 30px;
   margin-top: 20px;
 }
 
 footer .text {
-  margin: 20px auto;
+  margin: 30px auto;
 }
 
 footer .icons {
@@ -462,12 +462,12 @@ footer .text li {
   display: inline;
   text-align: center;
   font-weight: 700;
-  padding: 0 10px;
+  padding: 0 6px;
   text-transform: uppercase;
 }
 
 footer .copyright {
-  margin-top: 100px;
+  margin-top: 50px;
   font-weight: 400;
 }
 
@@ -564,7 +564,11 @@ footer .copyright b {
   color: #000;
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 410px) {
+  header .message {
+    font-size: 10px;
+  }
+
   footer .icons {
     display: block;
   }
@@ -615,7 +619,7 @@ footer .copyright b {
   }
 
   #latest .element {
-    grid-template: repeat(2, auto) / 100%;
+    grid-template: 22vw auto / 100%;
   }
 
   #latest .title {
@@ -713,6 +717,10 @@ footer .copyright b {
       url(./../images/head-1.png) 100% 50% / cover no-repeat;
   }
 
+  #latest .element {
+    grid-template: 18vw auto / 100%;
+  }
+
   #funding .top-box .h-title {
     display: inline;
   }
@@ -747,5 +755,19 @@ footer .copyright b {
 
   #popular .on-head {
     height: 22vw;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #latest .element {
+    grid-template: 200px auto / 100%;
+  }
+
+  #popular .on-head {
+    height: 260px;
+  }
+
+  #deal .element {
+    grid-template-rows: 200px auto;
   }
 }
