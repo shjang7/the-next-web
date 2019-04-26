@@ -194,7 +194,7 @@ main {
       rgba(0, 0, 0, 1) 0%,
       rgba(0, 0, 0, 0.1) 100%
     ),
-    url(./../images/head-2.png) 100% 50% / cover no-repeat;
+    url(./../images/head-1.png) 100% 50% / cover no-repeat;
 }
 
 #head-news .rest-news {
@@ -278,12 +278,13 @@ main {
 
 #latest .element {
   display: grid;
-  grid-template: 75px / 75px auto;
+  grid-template: 100% / auto auto;
+  grid-gap: 15px;
 }
 
 #latest .element img {
-  width: 100%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
   object-fit: cover;
 }
 
@@ -624,7 +625,9 @@ footer .copyright b {
   }
 
   #latest .element img {
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   #funding .top-box span {
