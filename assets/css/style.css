@@ -1,6 +1,5 @@
-
 body {
-  font: 400 18px/1.5 'Open Sans','Roboto',sans-serif;
+  font: 400 18px/1.5 "Open Sans", "Roboto", sans-serif;
   color: #555;
 }
 
@@ -12,7 +11,7 @@ h3,
 h4,
 h5,
 h6 {
-  font: 700 18px/1.5 'Roboto',sans-serif;
+  font: 700 18px/1.5 "Roboto", sans-serif;
   line-height: 1.2;
 }
 
@@ -487,7 +486,7 @@ footer .text {
 }
 
 footer .icons {
-/*  display: none;*/
+  /*  display: none;*/
   line-height: 2.5;
 }
 
@@ -556,7 +555,8 @@ footer .copyright b {
 .nav-bar a,
 #head-news .author-box,
 #head-news .author a,
-#deal .price span:first-of-type {
+#deal .price span:first-of-type,
+.fa-stack:hover {
   color: gray;
 }
 
