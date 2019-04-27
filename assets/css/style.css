@@ -160,16 +160,16 @@ main {
 #head-news .logo-box {
   width: 100%;
   height: 100%;
-  display: none;
 }
 
 #head-news .logo {
   width: 300px;
+  display: none;
 }
 
 #head-news .logo-box .text {
-  display: inline;
   float: right;
+  display: none;
 }
 
 #head-news .title {
@@ -249,23 +249,17 @@ main {
 
 .h-title {
   width: 100%;
-  height: 40px;
+  margin: 10px 0;
 }
 
 #latest .h-title {
   margin-left: 10px;
 }
 
-#deal .h-title {
-  margin-left: 5px;
-}
-
 #funding .top-box,
 #deal .top-box {
   width: 100%;
-  margin-top: 15px;
-  margin-bottom: 8px;
-  padding: 0 10px;
+  margin: 12px 10px 5px 10px;
 }
 
 #latest .element,
@@ -287,15 +281,20 @@ main {
   object-fit: cover;
 }
 
+#funding .top-box .more {
+  display: flex | block;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+
 #funding .top-box span {
-  margin-top: 15px;
   display: block;
 }
 
 #funding .element {
   width: 100%;
   height: 300px;
-  padding: 0 10px;
+  padding: 10px;
   box-sizing: border-box;
 }
 
@@ -445,8 +444,8 @@ main {
   border-bottom: #ccc 1px solid;
 }
 
-#deal .top-box span {
-  height: 100%;
+#deal .top-box .more {
+  margin: 5px 0;
   display: inline;
 }
 
@@ -486,7 +485,6 @@ footer .text {
 }
 
 footer .icons {
-  /*  display: none;*/
   line-height: 2.5;
 }
 
@@ -522,7 +520,7 @@ a {
 #latest .title a:hover,
 #popular .title a:hover,
 #deal .title a:hover {
-  text-decoration: underline;
+  text-decoration: underline dotted;
 }
 
 .taps:focus,
@@ -579,7 +577,7 @@ footer .copyright b {
 #popular .second-box a,
 #popular ul a span,
 #deal .h-title a,
-#deal .top-box span a,
+#deal .top-box .more,
 #deal .element .title a:hover {
   color: #ff4500; /*orange */
 }
@@ -597,7 +595,7 @@ footer .copyright b {
 #popular .element .h-title a:hover,
 #popular ul a:hover,
 #deal .h-title a:hover,
-#deal .top-box span a:hover,
+#deal .top-box .more:hover,
 #deal .element .title a {
   color: #000;
 }
@@ -668,6 +666,10 @@ footer .copyright b {
     object-fit: contain;
   }
 
+  #funding .top-box .more {
+    flex-flow: row nowrap;
+  }
+
   #funding .top-box span {
     display: inline-block;
     padding: 0 10px;
@@ -686,7 +688,7 @@ footer .copyright b {
     display: inline;
   }
 
-  #deal .top-box span a {
+  #deal .top-box .more {
     float: right;
   }
 
@@ -721,14 +723,14 @@ footer .copyright b {
   }
 }
 
-/* 1000px and up */
 @media only screen and (min-width: 1000px) {
   #head-news {
     grid-template-rows: repeat(2, 35vh);
   }
 
-  #head-news .logo-box {
-    display: block;
+  #head-news .logo-box .logo,
+  #head-news .logo-box .text {
+    display: inline;
   }
 
   #head-news .first-news .title {
@@ -767,12 +769,8 @@ footer .copyright b {
     display: inline;
   }
 
-  #funding .top-box span {
+  #funding .top-box .more {
     float: right;
-  }
-
-  #funding .top-box span:first-of-type {
-    border: none;
   }
 
   #funding .element:last-child {
