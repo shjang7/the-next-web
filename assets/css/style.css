@@ -86,12 +86,7 @@ header .taps {
 header .taps li {
   list-style: none;
   display: inline;
-  color: lightgray;
   margin: 0 10px;
-}
-
-header .taps .current a {
-  color: white;
 }
 
 header .u-clear {
@@ -124,20 +119,20 @@ header .u-clear {
 
 .u-clear .current-time {
   text-align: center;
-  color: red;
 }
 
 header .message {
-  background: rgb(255, 208, 0);
-  text-align: center;
-  color: black;
-  font-weight: 300;
   padding: 5px 0;
+  font-weight: 300;
+  text-align: center;
   border-left: 0.2px lightgray solid;
+  background: rgb(255, 208, 0);
 }
 
 main {
   width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
 }
 
 #head-news {
@@ -433,9 +428,7 @@ main {
 }
 
 #popular .second-box .title {
-  max-height: 100%;
   font-weight: 600;
-  overflow: hidden;
 }
 
 #popular .second-box img {
@@ -527,8 +520,8 @@ a {
   text-decoration: underline dotted;
 }
 
-.taps:focus,
 .taps:hover,
+.taps .current a,
 .icons i,
 #head-news .sort,
 #head-news .title a,
@@ -543,9 +536,7 @@ footer .link .text a:hover {
   color: white;
 }
 
-.taps,
 .taps a,
-.u-clear .search,
 .u-clear .search a,
 footer .text a,
 footer .copyright b {
