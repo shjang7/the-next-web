@@ -152,8 +152,8 @@ main {
 
 #head-news .first-news,
 #head-news .rest-news {
-  height: 28vh;
-  max-height: calc(1.5*140px);
+  height: 29vh;
+  max-height: calc(2.5*140px);
   min-height: 140px;
 }
 
@@ -633,9 +633,9 @@ footer .copyright b {
   }
 
   #head-news .first-news {
-    height: 56vh;
-    max-height: calc(3*141.5px);
-    min-height: calc(2*145px);
+    height: 60vh;
+    min-height: calc(2*150px);
+    max-height: calc(3.5*140px);
     grid-row: 1/3;
     grid-column: 1;
   }
@@ -643,7 +643,7 @@ footer .copyright b {
   #head-news .rest-news {
     height: 100%;
     min-height: 140px;
-    max-height: calc(1.5*140px);
+    max-height: 9999px;
     grid-column: 2;
   }
 
@@ -725,30 +725,28 @@ footer .copyright b {
   }
 }
 
+@media only screen and (min-width: 920px) {
+    #head-news .first-news {
+      height: 60vh;
+      min-height: 465px;
+      max-height: 700px;
+    }
+
+    #head-news .rest-news {
+      height: 100%;
+      min-height: 230px;
+      max-height: 9999px;
+    }
+}
+
 @media only screen and (min-width: 1000px) {
-  #head-news {
-    grid-template-rows: repeat(2, auto);
-  }
-
-  #head-news .first-news {
-    height: 70vh;
-    min-height: 465px;
-    max-height: 700px;
-  }
-
-  #head-news .rest-news {
-    height: 100%;
-    min-height: 230px;
-    max-height: 9999px;
-  }
-
   #head-news .logo-box .logo,
   #head-news .logo-box .text {
     display: inline;
   }
 
   #head-news .first-news .title {
-    font-size: 50px;
+    font-size: 60px;
   }
 
   #head-news .rest-news .title {
@@ -813,10 +811,6 @@ footer .copyright b {
 }
 
 @media only screen and (min-width: 1200px) {
-  #head-news .first-news {
-    max-height: 600px;
-  }
-
   #latest .element {
     grid-template: 140px auto / 100%;
   }
